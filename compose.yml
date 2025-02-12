@@ -9,8 +9,7 @@ services:
     environment:
       - USER=${USER}
       - MYSQL_PASSWORD=${PASSWORD}
-  
-#         (- type: volume  Technique 1 (docker)
+#         volume  Technique 1 (docker)
 #           source: mes_datas
             # target: /usr/share/nginx/html
 
