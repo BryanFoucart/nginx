@@ -1,0 +1,25 @@
+# Environnement dev nginx
+services:
+  monnginx:
+    build: ./front
+    ports:
+      - '8000:80'
+    volumes:
+        - ./front/app:/usr/share/nginx/html #Equivalent de Technique 2
+    environment:
+      - USER=${USER}
+      - MYSQL_PASSWORD=${PASSWORD}
+  
+#         (- type: volume  Technique 1 (docker)
+#           source: mes_datas
+            # target: /usr/share/nginx/html
+
+# volumes:
+#   mes_datas:)
+
+
+#       # - type: bind    Technique 2 (soi-même)
+#         # source: ./front/app
+#           target: /usr/share/nginx/html
+
+
